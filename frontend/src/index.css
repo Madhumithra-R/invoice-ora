@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+  }
+  html, body {
+    @apply bg-[#f8fafc] dark:bg-[#0c0716] text-slate-700 dark:text-slate-300 antialiased transition-colors duration-500;
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/70 dark:bg-[#1a1129]/70 backdrop-blur-md border border-white/20 dark:border-white/5 shadow-xl;
+  }
+  .glass-card {
+    @apply bg-white/80 dark:bg-[#1a1129]/80 backdrop-blur-lg border border-white/30 dark:border-white/10 shadow-lg rounded-2xl hover:shadow-xl transition-all duration-300;
+  }
+  
+  /* Global Dark Mode Smooth Overrides */
+  .dark .bg-white {
+    background-color: #150e22 !important;
+    border-color: rgba(255, 255, 255, 0.05) !important;
+  }
+  
+  .dark .text-slate-900, .dark .text-slate-800 {
+    color: #ffffff !important;
+  }
+  
+  .dark .text-slate-700, .dark .text-slate-600 {
+    color: #cbd5e1 !important;
+  }
+
+  .dark .text-slate-500, .dark .text-slate-400 {
+    color: #94a3b8 !important;
+  }
+
+  .dark .bg-slate-50, .dark .bg-slate-100 {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+  }
+  
+  .dark .border-slate-50, .dark .border-slate-100, .dark .border-slate-200 {
+    border-color: rgba(255, 255, 255, 0.05) !important;
+  }
+
+  .dark input, .dark select, .dark textarea {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: #f1f5f9 !important;
+  }
+
+  .dark .shadow-sm, .dark .shadow-md, .dark .shadow-lg, .dark .shadow-xl {
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5) !important;
+  }
+}
