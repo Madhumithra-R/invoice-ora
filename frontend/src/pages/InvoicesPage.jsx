@@ -143,7 +143,7 @@ const InvoicesPage = () => {
           </div>
         </div>
 
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto pb-48">
           <table className="w-full text-left border-collapse min-w-[800px]">
           <thead>
             <tr className="text-xs uppercase font-extrabold tracking-[0.1em] text-slate-400 border-b border-slate-100">
@@ -200,12 +200,13 @@ const InvoicesPage = () => {
                         <MoreHorizontal size={16} />
                       </button>
                       {openDropdown === inv._id && (
-                        <div className="absolute right-0 top-11 bg-white shadow-[0_10px_40px_rgba(0,0,0,0.1)] border border-slate-100 rounded-2xl w-44 z-50 py-3 text-[11px] font-black flex flex-col animate-in fade-in slide-in-from-top-2 duration-200">
-                          <button onClick={() => updateStatus(inv._id, 'paid')} className="flex items-center gap-3 px-5 py-2.5 hover:bg-emerald-50 text-emerald-600 text-left w-full"><CheckCircle2 size={14}/> MARK PAID</button>
-                          <button onClick={() => updateStatus(inv._id, 'overdue')} className="flex items-center gap-3 px-5 py-2.5 hover:bg-red-50 text-red-600 text-left w-full"><AlertCircle size={14}/> MARK OVERDUE</button>
-                          <button onClick={() => updateStatus(inv._id, 'pending')} className="flex items-center gap-3 px-5 py-2.5 hover:bg-orange-50 text-orange-600 text-left w-full"><Clock size={14}/> MARK PENDING</button>
+                        <div className="absolute right-0 top-full mt-2 bg-white shadow-[0_15px_50px_rgba(0,0,0,0.15)] border border-slate-100 rounded-2xl w-48 z-[100] py-3 text-[11px] font-black flex flex-col animate-in fade-in slide-in-from-top-4 duration-300">
+                          <div className="px-4 py-2 text-slate-400 text-[9px] uppercase tracking-widest border-b border-slate-50 mb-1">Actions</div>
+                          <button onClick={() => updateStatus(inv._id, 'paid')} className="flex items-center gap-3 px-5 py-2.5 hover:bg-emerald-50 text-emerald-600 text-left w-full transition-colors"><CheckCircle2 size={14}/> MARK PAID</button>
+                          <button onClick={() => updateStatus(inv._id, 'overdue')} className="flex items-center gap-3 px-5 py-2.5 hover:bg-red-50 text-red-600 text-left w-full transition-colors"><AlertCircle size={14}/> MARK OVERDUE</button>
+                          <button onClick={() => updateStatus(inv._id, 'pending')} className="flex items-center gap-3 px-5 py-2.5 hover:bg-orange-50 text-orange-600 text-left w-full transition-colors"><Clock size={14}/> MARK PENDING</button>
                           <div className="h-px bg-slate-50 my-2 w-full" />
-                          <button onClick={() => deleteInvoice(inv._id)} className="flex items-center gap-3 px-5 py-2.5 hover:bg-red-50 text-red-500 text-left w-full"><Trash2 size={14}/> DELETE RECORD</button>
+                          <button onClick={() => deleteInvoice(inv._id)} className="flex items-center gap-3 px-5 py-2.5 hover:bg-red-50 text-red-500 text-left w-full transition-colors"><Trash2 size={14}/> DELETE RECORD</button>
                         </div>
                       )}
                     </div>
