@@ -72,7 +72,6 @@ Invoiceora follows a **Corporate-Luxe** aesthetic using:
 
 ---
 
-## 👤 Developer
-**Built with ❤️ for Internship Review 2026**
+
 
 ---
